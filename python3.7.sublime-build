@@ -1,0 +1,13 @@
+{
+    "shell_cmd": "/opt/anaconda/bin/python3.7 \"$file\"",/*修改*/
+    "file_regex": "^[ ]*File \"(...*?)\", line ([0-9]*)",
+    "selector": "source.python",
+    "env": {"PYTHONIOENCODING": "utf-8"},
+    "variants":
+    [
+        {
+            "name": "Syntax Check",
+            "shell_cmd": "python -m py_compile \"${file}\"",/*修改*/
+        }
+    ]
+}
